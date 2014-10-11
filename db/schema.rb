@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141011023350) do
+ActiveRecord::Schema.define(version: 20141011050017) do
 
-  create_table "users", force: true do |t|
+  create_table "xxi_users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: ""
     t.string   "reset_password_token"
@@ -42,10 +42,10 @@ ActiveRecord::Schema.define(version: 20141011023350) do
     t.integer  "invitations_count",      default: 0
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["invitation_token"], name: "index_users_on_invitation_token", unique: true, using: :btree
-  add_index "users", ["invitations_count"], name: "index_users_on_invitations_count", using: :btree
-  add_index "users", ["invited_by_id"], name: "index_users_on_invited_by_id", using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "xxi_users", ["email"], name: "index_xxi_users_on_email", unique: true, using: :btree
+  add_index "xxi_users", ["invitation_token"], name: "index_xxi_users_on_invitation_token", unique: true, using: :btree
+  add_index "xxi_users", ["invitations_count"], name: "index_xxi_users_on_invitations_count", using: :btree
+  add_index "xxi_users", ["invited_by_id"], name: "index_xxi_users_on_invited_by_id", using: :btree
+  add_index "xxi_users", ["reset_password_token"], name: "index_xxi_users_on_reset_password_token", unique: true, using: :btree
 
 end
